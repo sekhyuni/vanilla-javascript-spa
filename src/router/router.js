@@ -1,39 +1,21 @@
-import { routes } from "./routeInfo";
-import NotFound from "../pages/notfound/notfound";
+import { routes } from './routeInfo';
+import NotFound from '../pages/notfound/notfound';
 
-function Router($container) {
-    this.$container = $container;
-    let currentPage = undefined;
+function Router($root) {
+    this.$root = $root;
+    this.render = () => {
+        const { $root } = this;
+        const TargetPage = findMatchedRoute()?.element || NotFound;
+        new TargetPage($root);
+    };
+    this.navigate = (url) => {
+        const { render } = this;
+        history.pushState(null, '', url);
+        render();
+    };
 
     const findMatchedRoute = () =>
         routes.find((route) => route.path.test(location.pathname));
-
-    const route = () => {
-        currentPage = null;
-        const TargetPage = findMatchedRoute()?.element || NotFound;
-        currentPage = new TargetPage(this.$container);
-    };
-
-    const init = () => {
-        window.addEventListener('historychange', ({ detail }) => {
-            const { to, isReplace } = detail;
-
-            if (isReplace || to === location.pathname) {
-                history.replaceState(null, '', to);
-            } else {
-                history.pushState(null, '', to);
-            }
-
-            route();
-        });
-
-        window.addEventListener('popstate', function () {
-            route();
-        });
-    };
-
-    init();
-    route();
 }
 
 export default Router;

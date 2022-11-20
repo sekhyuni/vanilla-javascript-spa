@@ -1,14 +1,10 @@
 import styles from "./join.module.css";
 
-function Join($container) {
-  this.$container = $container;
-
-  this.setState = () => {
-    this.render();
-  };
+function Join($root) {
+  this.$root = $root;
 
   this.render = () => {
-    this.$container.innerHTML = `
+    this.$root.innerHTML = `
         <main class="${styles.joinPage}">
           회원가입 페이지에요.
         </main>
