@@ -1,9 +1,9 @@
-import styles from "./home.module.css";
+import styles from './home.module.css';
 
-function Home($root) {
+function Home($root: HTMLDivElement): void {
   this.$root = $root;
 
-  this.render = () => {
+  this.render = (): void => {
     this.$root.innerHTML = `
         <main class="${styles.homePage}">
           메인 페이지에요.

@@ -1,9 +1,9 @@
-import styles from "./join.module.css";
+import styles from './join.module.css';
 
-function Join($root) {
+function Join($root: HTMLDivElement): void {
   this.$root = $root;
 
-  this.render = () => {
+  this.render = (): void => {
     this.$root.innerHTML = `
         <main class="${styles.joinPage}">
           회원가입 페이지에요.
