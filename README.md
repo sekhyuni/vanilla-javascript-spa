@@ -1,14 +1,14 @@
-# vanilla-javascript-spa
-## Getting Started with Babel&Webpack
-1. 라이브러리 다운
+# vanillajs-spa-router
+## Getting Started with Webpack & SWC
+1. Package Download
     ```javascript
-    // $(Terminal Path) : ~/vanilla-javascript-spa
-    $ npm install
-1. 서버 기동 (webpack server)
+    // $(Terminal Path) : ~/vanillajs-spa-router
+    $ yarn
+1. Run Server (webpack server)
     ```javascript
-    // $(Terminal Path) : ~/vanilla-javascript-spa
-    $ npm run dev 
-1. 소스 빌드 (webpack)
+    // $(Terminal Path) : ~/vanillajs-spa-router
+    $ yarn dev 
+1. Build (webpack)
     ```javascript
-    // $(Terminal Path) : ~/vanilla-javascript-spa
-    $ npm run build
+    // $(Terminal Path) : ~/vanillajs-spa-router
+    $ yarn build
