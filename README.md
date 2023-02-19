@@ -1,14 +1,17 @@
-# vanillajs-spa-router
-## Getting Started with Webpack & SWC
-1. Package Download
-    ```javascript
-    // $(Terminal Path) : ~/vanillajs-spa-router
+## 실행 방법
+1.  package.json에 정의되어 있는 패키지 설치 (최초 1회)
+    ```shell
     $ yarn
-1. Run Server (webpack server)
-    ```javascript
-    // $(Terminal Path) : ~/vanillajs-spa-router
-    $ yarn dev 
-1. Build (webpack)
-    ```javascript
-    // $(Terminal Path) : ~/vanillajs-spa-router
+    ```
+1.  개발 모드로 서버 실행
+    ```shell
+    $ yarn dev
+    ```
+1.  프로젝트 빌드
+    ```shell
     $ yarn build
+    ```
+1.  운영 모드로 서버 실행
+    ```shell
+    $ yarn start
+    ```
